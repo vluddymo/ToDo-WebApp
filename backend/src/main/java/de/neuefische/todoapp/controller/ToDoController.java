@@ -2,8 +2,7 @@ package de.neuefische.todoapp.controller;
 
 
 import de.neuefische.todoapp.data.Description;
-import de.neuefische.todoapp.data.Stati;
-import de.neuefische.todoapp.enums.Status;
+import de.neuefische.todoapp.data.NewStatus;
 import de.neuefische.todoapp.models.ToDoNote;
 import de.neuefische.todoapp.service.ToDoService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -38,7 +37,7 @@ public class ToDoController {
     }
 
     @PutMapping("{id}/status")
-    public ToDoNote updateStatus(@PathVariable String id, @RequestBody Stati status) {
+    public ToDoNote updateStatus(@PathVariable String id, @RequestBody NewStatus status) {
         return toDoService.setStatus(id, status);
     }
 

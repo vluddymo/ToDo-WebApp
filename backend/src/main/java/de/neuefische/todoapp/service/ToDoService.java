@@ -1,7 +1,7 @@
 package de.neuefische.todoapp.service;
 
 import de.neuefische.todoapp.data.Description;
-import de.neuefische.todoapp.data.Stati;
+import de.neuefische.todoapp.data.NewStatus;
 import de.neuefische.todoapp.db.ToDoNoteDB;
 import de.neuefische.todoapp.models.ToDoNote;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -31,7 +31,7 @@ public class ToDoService {
         return toDoNotes.addNoteToDb(description);
     }
 
-    public ToDoNote setStatus(String id, Stati status) {
+    public ToDoNote setStatus(String id, NewStatus status) {
         return toDoNotes.setStatusOfNote(id, status);
     }
 }

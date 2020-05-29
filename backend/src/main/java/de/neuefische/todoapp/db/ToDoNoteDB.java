@@ -1,7 +1,7 @@
 package de.neuefische.todoapp.db;
 
 import de.neuefische.todoapp.data.Description;
-import de.neuefische.todoapp.data.Stati;
+import de.neuefische.todoapp.data.NewStatus;
 import de.neuefische.todoapp.enums.Status;
 import de.neuefische.todoapp.models.ToDoNote;
 import org.springframework.http.HttpStatus;
@@ -44,7 +44,7 @@ public class ToDoNoteDB {
         toDoNoteList.clear();
     }
 
-    public ToDoNote setStatusOfNote(String id, Stati status) {
+    public ToDoNote setStatusOfNote(String id, NewStatus status) {
         Status newStatus = status.getStatus();
         for (ToDoNote note : toDoNoteList) {
             if (note.getId().equals(id)) {
